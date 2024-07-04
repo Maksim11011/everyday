@@ -12,6 +12,10 @@ void main() {
   ));
 }
 
+/*
+ДОБАВЛЕНА ЛОКАЛИЗАЦИЯ, ТЕМЫ, ПРОВАЙДЕР 
+*/
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
