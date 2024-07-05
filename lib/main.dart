@@ -1,6 +1,6 @@
+import 'package:everyday/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:everyday/generated/l10n.dart';
-import 'package:everyday/pages/home_page.dart';
 import 'package:everyday/theme/theme_provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      home: const HomePage(),
+      home: LoginPage(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }

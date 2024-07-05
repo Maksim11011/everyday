@@ -1,3 +1,8 @@
 {
-  "hello": "Hello!"
+  "hello": "hello!",
+  "authorization": "authorization",
+  "homepage": "Домашняя страница",
+  "welcome": "Добро пожаловать",
+  "Email": "Эл. адрес",
+  "Password": "Пароль"
 }
