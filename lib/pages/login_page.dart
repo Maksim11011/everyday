@@ -1,3 +1,4 @@
+import 'package:everyday/components/my_button.dart';
 import 'package:everyday/components/my_textfield.dart';
 import 'package:everyday/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,7 @@ class LoginPage extends StatelessWidget {
 
               // Приветственное сообщение
               Text(
-                S.of(context).welcome,
+                S.of(context).Welcome,
                 style: TextStyle(
                   fontSize: 20,
                   color: Theme.of(context).colorScheme.inversePrimary,
@@ -53,7 +54,13 @@ class LoginPage extends StatelessWidget {
                 obscureText: true,
               ),
 
+              const SizedBox(height: 10),
+
               // Кнопка входа
+              MyButton(
+                onTap: () {},
+                text: S.of(context).SignIn,
+              ),
 
               // Кнопка регистрации
             ],

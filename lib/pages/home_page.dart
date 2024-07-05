@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              S.of(context).homepage,
+              S.of(context).Homepage,
             )
           ],
         ),

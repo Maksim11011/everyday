@@ -50,41 +50,33 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `hello!`
-  String get hello {
-    return Intl.message(
-      'hello!',
-      name: 'hello',
-      desc: '',
-      args: [],
-    );
-  }
+  // skipped getter for the 'Hello!' key
 
   /// `authorization`
-  String get authorization {
+  String get Authorization {
     return Intl.message(
       'authorization',
-      name: 'authorization',
+      name: 'Authorization',
       desc: '',
       args: [],
     );
   }
 
   /// `Домашняя страница`
-  String get homepage {
+  String get Homepage {
     return Intl.message(
       'Домашняя страница',
-      name: 'homepage',
+      name: 'Homepage',
       desc: '',
       args: [],
     );
   }
 
   /// `Добро пожаловать`
-  String get welcome {
+  String get Welcome {
     return Intl.message(
       'Добро пожаловать',
-      name: 'welcome',
+      name: 'Welcome',
       desc: '',
       args: [],
     );
@@ -105,6 +97,16 @@ class S {
     return Intl.message(
       'Пароль',
       name: 'Password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Войти`
+  String get SignIn {
+    return Intl.message(
+      'Войти',
+      name: 'SignIn',
       desc: '',
       args: [],
     );

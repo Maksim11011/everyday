@@ -1,8 +1,9 @@
 {
-  "hello": "hello!",
-  "authorization": "authorization",
-  "homepage": "Домашняя страница",
-  "welcome": "Добро пожаловать",
+  "Hello!": "hello!",
+  "Authorization": "authorization",
+  "Homepage": "Домашняя страница",
+  "Welcome": "Добро пожаловать",
   "Email": "Эл. адрес",
-  "Password": "Пароль"
+  "Password": "Пароль",
+  "SignIn": "Войти"
 }
