@@ -3,11 +3,20 @@ import 'package:everyday/components/my_textfield.dart';
 import 'package:everyday/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+class LoginPage extends StatefulWidget {
+  final void Function()? onTap;
 
-  LoginPage({super.key});
+  const LoginPage({super.key, required this.onTap});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  // Контроллеры Почты и пароля
+  final TextEditingController emailController = TextEditingController();
+
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +71,28 @@ class LoginPage extends StatelessWidget {
                 text: S.of(context).SignIn,
               ),
 
+              const SizedBox(height: 20),
+
               // Кнопка регистрации
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'У вас нет аккаунта?',
+                  ),
+                  const SizedBox(width: 5),
+                  GestureDetector(
+                    onTap: widget.onTap,
+                    child: Text(
+                      'Регистрация',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

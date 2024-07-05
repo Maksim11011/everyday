@@ -26,7 +26,9 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      home: LoginPage(),
+      home: LoginPage(
+        onTap: () {},
+      ),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
