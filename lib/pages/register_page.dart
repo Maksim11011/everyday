@@ -3,19 +3,24 @@ import 'package:everyday/components/my_textfield.dart';
 import 'package:everyday/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
+class RegisterPage extends StatefulWidget {
   final void Function()? onTap;
 
-  const LoginPage({super.key, required this.onTap});
+  const RegisterPage({
+    super.key,
+    required this.onTap,
+  });
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   // Контроллеры Почты и пароля
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
 
               // Приветственное сообщение
               Text(
-                S.of(context).Welcome,
+                'Регистрация',
                 style: TextStyle(
                   fontSize: 20,
                   color: Theme.of(context).colorScheme.inversePrimary,
@@ -62,28 +67,37 @@ class _LoginPageState extends State<LoginPage> {
                 obscureText: true,
               ),
 
+              const SizedBox(height: 25),
+
+              // Поля подтверждения пароля
+              MyTextField(
+                controller: confirmPasswordController,
+                hintText: 'Подтвердите пароль',
+                obscureText: true,
+              ),
+
               const SizedBox(height: 10),
 
-              // Кнопка входа
+              // Кнопка создания аккаунта
               MyButton(
                 onTap: () {},
-                text: S.of(context).SignIn,
+                text: 'Создать аккаунт',
               ),
 
               const SizedBox(height: 20),
 
-              // Кнопка регистрации
+              // Кнопка входа
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    S.of(context).NotAMember,
+                  const Text(
+                    'У вас есть аккаунт?',
                   ),
                   const SizedBox(width: 5),
                   GestureDetector(
                     onTap: widget.onTap,
                     child: Text(
-                      S.of(context).RegisterNow,
+                      'Войти',
                       style: TextStyle(
                         color: Theme.of(context).colorScheme.inversePrimary,
                         fontWeight: FontWeight.bold,
