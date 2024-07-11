@@ -77,14 +77,14 @@ class _LoginPageState extends State<LoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
-                    'У вас нет аккаунта?',
+                  Text(
+                    S.of(context).NotAMember,
                   ),
                   const SizedBox(width: 5),
                   GestureDetector(
                     onTap: widget.onTap,
                     child: Text(
-                      'Регистрация',
+                      S.of(context).RegisterNow,
                       style: TextStyle(
                         color: Theme.of(context).colorScheme.inversePrimary,
                         fontWeight: FontWeight.bold,

@@ -25,7 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "Authorization": MessageLookupByLibrary.simpleMessage("authorization"),
         "Email": MessageLookupByLibrary.simpleMessage("Эл. адрес"),
         "Homepage": MessageLookupByLibrary.simpleMessage("Домашняя страница"),
+        "NotAMember":
+            MessageLookupByLibrary.simpleMessage("У вас нет аккаунта?"),
         "Password": MessageLookupByLibrary.simpleMessage("Пароль"),
+        "RegisterNow": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "SignIn": MessageLookupByLibrary.simpleMessage("Войти"),
         "Welcome": MessageLookupByLibrary.simpleMessage("Добро пожаловать")
       };

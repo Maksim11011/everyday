@@ -111,6 +111,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Регистрация`
+  String get RegisterNow {
+    return Intl.message(
+      'Регистрация',
+      name: 'RegisterNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `У вас нет аккаунта?`
+  String get NotAMember {
+    return Intl.message(
+      'У вас нет аккаунта?',
+      name: 'NotAMember',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
