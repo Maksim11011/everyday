@@ -36,9 +36,9 @@ class _LoginPageState extends State<LoginPage> {
 
               const SizedBox(height: 25),
 
-              // Приветственное сообщение
+              // Вход в аккаунт
               Text(
-                S.of(context).Welcome,
+                'Введите данные для входа',
                 style: TextStyle(
                   fontSize: 20,
                   color: Theme.of(context).colorScheme.inversePrimary,
