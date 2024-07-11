@@ -1,6 +1,7 @@
 import 'package:everyday/components/my_button.dart';
 import 'package:everyday/components/my_textfield.dart';
 import 'package:everyday/generated/l10n.dart';
+import 'package:everyday/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -13,9 +14,19 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // Контроллеры Почты и пароля
+  // Контроллеры почты и пароля
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
+  // Переход на домашнюю страницу
+  void login() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const HomePage(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
 
               // Кнопка входа
               MyButton(
-                onTap: () {},
+                onTap: login,
                 text: S.of(context).SignIn,
               ),
 
