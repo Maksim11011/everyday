@@ -1,4 +1,4 @@
-import 'package:everyday/pages/register_page.dart';
+import 'package:everyday/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:everyday/generated/l10n.dart';
 import 'package:everyday/theme/theme_provider.dart';
@@ -11,10 +11,6 @@ void main() {
     child: const MyApp(),
   ));
 }
-
-/*
-ДОБАВЛЕНА ЛОКАЛИЗАЦИЯ, ТЕМЫ, ПРОВАЙДЕР 
-*/
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -30,7 +26,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      home: RegisterPage(
+      home: LoginPage(
         onTap: () {},
       ),
       theme: Provider.of<ThemeProvider>(context).themeData,
