@@ -7,5 +7,9 @@
   "Password": "Пароль",
   "SignIn": "Войти",
   "RegisterNow": "Регистрация",
-  "NotAMember": "У вас нет аккаунта?"
+  "NotAMember": "У вас нет аккаунта?",
+  "Register": "Регистрация",
+  "ConfirmPassword": "Подтвердите пароль",
+  "CreateAnAccount": "Создать аккаунт",
+  "AlreadyHaveAnAccount": "У вас есть аккаунт?"
 }

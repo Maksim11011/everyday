@@ -42,7 +42,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
               // Приветственное сообщение
               Text(
-                'Регистрация',
+                S.of(context).Register,
                 style: TextStyle(
                   fontSize: 20,
                   color: Theme.of(context).colorScheme.inversePrimary,
@@ -72,7 +72,7 @@ class _RegisterPageState extends State<RegisterPage> {
               // Поля подтверждения пароля
               MyTextField(
                 controller: confirmPasswordController,
-                hintText: 'Подтвердите пароль',
+                hintText: S.of(context).ConfirmPassword,
                 obscureText: true,
               ),
 
@@ -81,7 +81,7 @@ class _RegisterPageState extends State<RegisterPage> {
               // Кнопка создания аккаунта
               MyButton(
                 onTap: () {},
-                text: 'Создать аккаунт',
+                text: S.of(context).CreateAnAccount,
               ),
 
               const SizedBox(height: 20),
@@ -90,14 +90,14 @@ class _RegisterPageState extends State<RegisterPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
-                    'У вас есть аккаунт?',
+                  Text(
+                    S.of(context).AlreadyHaveAnAccount,
                   ),
                   const SizedBox(width: 5),
                   GestureDetector(
                     onTap: widget.onTap,
                     child: Text(
-                      'Войти',
+                      S.of(context).SignIn,
                       style: TextStyle(
                         color: Theme.of(context).colorScheme.inversePrimary,
                         fontWeight: FontWeight.bold,
