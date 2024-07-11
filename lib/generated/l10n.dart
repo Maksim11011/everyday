@@ -131,6 +131,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Регистрация`
+  String get Register {
+    return Intl.message(
+      'Регистрация',
+      name: 'Register',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Подтвердите пароль`
+  String get ConfirmPassword {
+    return Intl.message(
+      'Подтвердите пароль',
+      name: 'ConfirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Создать аккаунт`
+  String get CreateAnAccount {
+    return Intl.message(
+      'Создать аккаунт',
+      name: 'CreateAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `У вас есть аккаунт?`
+  String get AlreadyHaveAnAccount {
+    return Intl.message(
+      'У вас есть аккаунт?',
+      name: 'AlreadyHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
