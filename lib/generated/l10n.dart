@@ -50,11 +50,83 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Hello!`
-  String get hello {
+  // skipped getter for the 'Hello!' key
+
+  /// `authorization`
+  String get Authorization {
     return Intl.message(
-      'Hello!',
-      name: 'hello',
+      'authorization',
+      name: 'Authorization',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Домашняя страница`
+  String get Homepage {
+    return Intl.message(
+      'Домашняя страница',
+      name: 'Homepage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Добро пожаловать`
+  String get Welcome {
+    return Intl.message(
+      'Добро пожаловать',
+      name: 'Welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Эл. адрес`
+  String get Email {
+    return Intl.message(
+      'Эл. адрес',
+      name: 'Email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Пароль`
+  String get Password {
+    return Intl.message(
+      'Пароль',
+      name: 'Password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Войти`
+  String get SignIn {
+    return Intl.message(
+      'Войти',
+      name: 'SignIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Регистрация`
+  String get RegisterNow {
+    return Intl.message(
+      'Регистрация',
+      name: 'RegisterNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `У вас нет аккаунта?`
+  String get NotAMember {
+    return Intl.message(
+      'У вас нет аккаунта?',
+      name: 'NotAMember',
       desc: '',
       args: [],
     );
