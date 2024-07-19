@@ -1,4 +1,4 @@
-import 'package:everyday/auth/login_or_register.dart';
+import 'package:everyday/services/auth/auth_gate.dart';
 import 'package:everyday/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      home: const LoginOrRegister(),
+      home: const AuthGate(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
