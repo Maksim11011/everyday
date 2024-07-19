@@ -1,7 +1,9 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:everyday/components/my_button.dart';
 import 'package:everyday/components/my_textfield.dart';
 import 'package:everyday/generated/l10n.dart';
-import 'package:everyday/pages/home_page.dart';
+import 'package:everyday/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -18,14 +20,27 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  // Переход на домашнюю страницу
-  void login() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const HomePage(),
-      ),
-    );
+  // Метод логина
+  Future<void> login() async {
+    // Получить экземпляр аутентификации
+    final authService = AuthService();
+
+    // Попытка входа в систему
+    try {
+      await authService.signInWithEmailPassword(
+        emailController.text,
+        passwordController.text,
+      );
+    }
+    // Показать все ошибки
+    catch (e) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(e.toString()),
+        ),
+      );
+    }
   }
 
   @override

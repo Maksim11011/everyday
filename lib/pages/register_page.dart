@@ -1,25 +1,62 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:everyday/components/my_button.dart';
 import 'package:everyday/components/my_textfield.dart';
 import 'package:everyday/generated/l10n.dart';
+import 'package:everyday/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
   final void Function()? onTap;
 
-  const RegisterPage({
-    super.key,
-    required this.onTap,
-  });
+  const RegisterPage({super.key, required this.onTap});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  // Контроллеры Почты и пароля
+  // Контроллеры почты и пароля
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
+
+  // Метод регистрации
+  void register() async {
+    // Получить экземпляр аутентификации
+    final _authService = AuthService();
+
+    // Пароль совпадает -> создать пользователя
+    if (passwordController.text == confirmPasswordController.text) {
+      // Попробовать создать пользователя
+      try {
+        await _authService.signUpWithEmailPassword(
+          emailController.text,
+          passwordController.text,
+        );
+      }
+
+      // Показать любые ошибки
+      catch (e) {
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text(e.toString()),
+          ),
+        );
+      }
+    }
+
+    // Пароль НЕ совпадает -> показать ошибку
+    else {
+      showDialog(
+        context: context,
+        builder: (context) => const AlertDialog(
+          title: Text('Пароли не совпадают!'),
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +116,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
               // Кнопка создания аккаунта
               MyButton(
-                onTap: () {},
+                onTap: register,
                 text: S.of(context).CreateAnAccount,
               ),
 
