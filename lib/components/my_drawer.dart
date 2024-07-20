@@ -37,14 +37,14 @@ class MyDrawer extends StatelessWidget {
           MyDrawerTile(
             text: 'Главный экран',
             icon: Icons.home,
-            onTap: () {},
+            onTap: () => Navigator.pop(context),
           ),
 
           // Настройки
           MyDrawerTile(
             text: 'Настройки',
             icon: Icons.settings,
-            onTap: () => Navigator.pop(context),
+            onTap: () {},
           ),
 
           const Spacer(),

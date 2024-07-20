@@ -23,9 +23,6 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.background,
       ),
-      body: Column(
-        children: [ElevatedButton(onPressed: logout, child: Text('exit'))],
-      ),
       drawer: MyDrawer(),
     );
   }

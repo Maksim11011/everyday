@@ -4,6 +4,7 @@ class MyDrawerTile extends StatelessWidget {
   final String text;
   final IconData? icon;
   final void Function()? onTap;
+
   const MyDrawerTile({
     super.key,
     required this.text,
@@ -27,6 +28,7 @@ class MyDrawerTile extends StatelessWidget {
           icon,
           color: Theme.of(context).colorScheme.secondary,
         ),
+        onTap: onTap,
       ),
     );
   }
