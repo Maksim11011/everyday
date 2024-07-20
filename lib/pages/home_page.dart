@@ -1,5 +1,4 @@
 import 'package:everyday/components/my_drawer.dart';
-import 'package:everyday/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,16 +6,18 @@ class HomePage extends StatelessWidget {
     super.key,
   });
 
-  void logout() {
+  /* void logout() {
     final authService = AuthService();
     authService.signOut();
+    import 'package:everyday/services/auth/auth_service.dart';
   }
+  */
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
     );
   }
 }

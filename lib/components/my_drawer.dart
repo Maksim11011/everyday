@@ -1,13 +1,15 @@
+import 'package:everyday/components/my_drawer_tile.dart';
+import 'package:everyday/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
-class MyDrawer extends StatefulWidget {
+class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
-  @override
-  State<MyDrawer> createState() => _MyDrawerState();
-}
+  void logout() {
+    final authService = AuthService();
+    authService.signOut();
+  }
 
-class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -32,10 +34,34 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
 
           // Главный экран
+          MyDrawerTile(
+            text: 'Главный экран',
+            icon: Icons.home,
+            onTap: () {},
+          ),
 
           // Настройки
+          MyDrawerTile(
+            text: 'Настройки',
+            icon: Icons.settings,
+            onTap: () => Navigator.pop(context),
+          ),
+
+          const Spacer(),
 
           // Кнопка выхода
+          MyDrawerTile(
+            text: 'Выход',
+            icon: Icons.exit_to_app,
+            onTap: () {
+              logout();
+              Navigator.pop(context);
+            },
+          ),
+
+          const SizedBox(
+            height: 25,
+          )
         ],
       ),
     );

@@ -1,5 +1,5 @@
-import 'package:everyday/services/auth/auth_gate.dart';
 import 'package:everyday/firebase_options.dart';
+import 'package:everyday/services/auth/auth_gate.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:everyday/generated/l10n.dart';
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      home: const AuthGate(),
+      home: AuthGate(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
