@@ -4,7 +4,7 @@ import 'package:everyday/theme/light_mode.dart';
 
 class ThemeProvider extends ChangeNotifier {
   // Изначльно, светлый режим
-  ThemeData _themeData = lightMode;
+  ThemeData _themeData = darkMode;
 
   // Текущая тема
   ThemeData get themeData => _themeData;
