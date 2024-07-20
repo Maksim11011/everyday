@@ -2,7 +2,7 @@ import 'package:everyday/components/my_drawer.dart';
 import 'package:everyday/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({
     super.key,
   });
