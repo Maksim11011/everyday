@@ -1,4 +1,5 @@
-import 'package:everyday/components/my_drawer.dart';
+import 'package:everyday/generated/l10n.dart';
+import 'package:everyday/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,11 +7,32 @@ class HomePage extends StatelessWidget {
     super.key,
   });
 
+  void logout() {
+    final authService = AuthService();
+    authService.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      drawer: const MyDrawer(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              S.of(context).Homepage,
+            ),
+            const SizedBox(height: 40),
+            ElevatedButton(
+              onPressed: logout,
+              child: const Text(
+                'Выход',
+                style: TextStyle(fontSize: 40),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
