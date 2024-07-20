@@ -15,15 +15,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.calendar_month_rounded),
-          )
-        ],
-        backgroundColor: Theme.of(context).colorScheme.background,
-      ),
+      appBar: AppBar(),
       drawer: MyDrawer(),
     );
   }
