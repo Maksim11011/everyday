@@ -24,13 +24,13 @@ class _RegisterPageState extends State<RegisterPage> {
   // Метод регистрации
   void register() async {
     // Получить экземпляр аутентификации
-    final _authService = AuthService();
+    final authService = AuthService();
 
     // Пароль совпадает -> создать пользователя
     if (passwordController.text == confirmPasswordController.text) {
       // Попробовать создать пользователя
       try {
-        await _authService.signUpWithEmailPassword(
+        await authService.signUpWithEmailPassword(
           emailController.text,
           passwordController.text,
         );
