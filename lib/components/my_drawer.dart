@@ -1,4 +1,5 @@
 import 'package:everyday/components/my_drawer_tile.dart';
+import 'package:everyday/pages/settings_page.dart';
 import 'package:everyday/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,7 @@ class MyDrawer extends StatelessWidget {
             child: Icon(
               Icons.lock_open_rounded,
               size: 50,
-              color: Theme.of(context).colorScheme.tertiary,
+              color: Theme.of(context).colorScheme.secondary,
             ),
           ),
 
@@ -42,10 +43,15 @@ class MyDrawer extends StatelessWidget {
 
           // Настройки
           MyDrawerTile(
-            text: 'Настройки',
-            icon: Icons.settings,
-            onTap: () {},
-          ),
+              text: 'Настройки',
+              icon: Icons.settings,
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SettingsPage()),
+                );
+              }),
 
           const Spacer(),
 
