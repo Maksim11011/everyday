@@ -25,7 +25,7 @@ class MyDrawerTile extends StatelessWidget {
         ),
         leading: Icon(
           icon,
-          color: Theme.of(context).colorScheme.inversePrimary,
+          color: Theme.of(context).colorScheme.secondary,
         ),
       ),
     );

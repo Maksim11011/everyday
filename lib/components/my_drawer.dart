@@ -20,16 +20,16 @@ class MyDrawer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 60),
             child: Icon(
-              Icons.logo_dev,
+              Icons.lock_open_rounded,
               size: 50,
-              color: Theme.of(context).colorScheme.inversePrimary,
+              color: Theme.of(context).colorScheme.tertiary,
             ),
           ),
 
           Padding(
             padding: const EdgeInsets.all(13.0),
             child: Divider(
-              color: Theme.of(context).colorScheme.secondary,
+              color: Theme.of(context).colorScheme.tertiary,
             ),
           ),
 
@@ -53,10 +53,7 @@ class MyDrawer extends StatelessWidget {
           MyDrawerTile(
             text: 'Выход',
             icon: Icons.exit_to_app,
-            onTap: () {
-              logout();
-              Navigator.pop(context);
-            },
+            onTap: logout,
           ),
 
           const SizedBox(
