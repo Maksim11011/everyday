@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      home: AuthGate(),
+      home: const AuthGate(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }

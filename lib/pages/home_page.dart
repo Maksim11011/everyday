@@ -6,13 +6,6 @@ class HomePage extends StatelessWidget {
     super.key,
   });
 
-  /* void logout() {
-    final authService = AuthService();
-    authService.signOut();
-    import 'package:everyday/services/auth/auth_service.dart';
-  }
-  */
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
