@@ -56,6 +56,7 @@ class MyDrawer extends StatelessWidget {
           const Spacer(),
 
           // Кнопка выхода
+
           MyDrawerTile(
             text: 'Выход',
             icon: Icons.exit_to_app,
