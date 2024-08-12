@@ -1,4 +1,5 @@
 import 'package:everyday/components/my_drawer.dart';
+import 'package:everyday/components/my_fab.dart';
 import 'package:everyday/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -24,6 +25,10 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).colorScheme.background,
       ),
       drawer: const MyDrawer(),
+      body: Container(
+        color: Theme.of(context).colorScheme.background,
+      ),
+      floatingActionButton: const MyFab(),
     );
   }
 }
