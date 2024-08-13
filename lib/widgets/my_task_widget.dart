@@ -27,15 +27,19 @@ class MyTaskWidget extends StatelessWidget {
             onTap: () {
               // Установить или снять флажок
             },
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 600),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                    color: Theme.of(context).colorScheme.secondary, width: .8),
-              ),
-              child: const Icon(
-                Icons.check,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 30),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 600),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                      color: Theme.of(context).colorScheme.secondary,
+                      width: .8),
+                ),
+                child: const Icon(
+                  Icons.check,
+                ),
               ),
             ),
           ),
