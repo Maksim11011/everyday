@@ -1,3 +1,4 @@
+import 'package:everyday/pages/task_page.dart';
 import 'package:flutter/material.dart';
 
 class MyFab extends StatelessWidget {
@@ -8,7 +9,14 @@ class MyFab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => const TaskPage(),
+          ),
+        );
+      },
       child: Material(
         borderRadius: BorderRadius.circular(28),
         elevation: 5,
