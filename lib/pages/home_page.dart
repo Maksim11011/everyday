@@ -1,6 +1,7 @@
 import 'package:everyday/components/my_drawer.dart';
 import 'package:everyday/components/my_fab.dart';
 import 'package:everyday/services/auth/auth_service.dart';
+import 'package:everyday/widgets/my_task_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,8 +26,23 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).colorScheme.background,
       ),
       drawer: const MyDrawer(),
-      body: Container(
-        color: Theme.of(context).colorScheme.background,
+      body: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          children: [
+            SizedBox(
+              width: double.infinity,
+              height: 735,
+              child: ListView.builder(
+                  itemCount: 15,
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (context, index) {
+                    return const MyTaskWidget();
+                  }),
+            )
+          ],
+        ),
       ),
       floatingActionButton: const MyFab(),
     );
