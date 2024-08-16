@@ -9,7 +9,7 @@ class MyTaskAppBar extends StatelessWidget implements PreferredSizeWidget {
       width: double.infinity,
       height: 150,
       child: Padding(
-        padding: const EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.only(left: 15),
         child: Row(
           children: [
             Padding(

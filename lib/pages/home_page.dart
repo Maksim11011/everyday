@@ -26,24 +26,12 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).colorScheme.background,
       ),
       drawer: const MyDrawer(),
-      body: SizedBox(
-        width: double.infinity,
-        height: double.infinity,
-        child: Column(
-          children: [
-            SizedBox(
-              width: double.infinity,
-              height: 735,
-              child: ListView.builder(
-                  itemCount: 15,
-                  scrollDirection: Axis.vertical,
-                  itemBuilder: (context, index) {
-                    return const MyTaskWidget();
-                  }),
-            )
-          ],
-        ),
-      ),
+      body: ListView.builder(
+          itemCount: 15,
+          scrollDirection: Axis.vertical,
+          itemBuilder: (context, index) {
+            return const MyTaskWidget();
+          }),
       floatingActionButton: const MyFab(),
     );
   }
