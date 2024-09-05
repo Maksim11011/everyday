@@ -1,3 +1,4 @@
+import 'package:everyday/components/my_textformfield.dart';
 import 'package:everyday/widgets/my_task_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -9,10 +10,48 @@ class TaskPage extends StatefulWidget {
 }
 
 class _TaskPageState extends State<TaskPage> {
+  final TextEditingController tittleTaskController = TextEditingController();
+  final TextEditingController descriptionTaskController =
+      TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: MyTaskAppBar(),
+    return GestureDetector(
+      onTap: () => FocusManager.instance.primaryFocus!.unfocus(),
+      child: Scaffold(
+        // AppBar
+        appBar: const MyTaskAppBar(),
+
+        // Body
+        body: SizedBox(
+          child: Column(
+            children: [
+              const SizedBox(
+                // ГЛАВНАЯ НАДПИСЬ
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Новая заметка'),
+                  ],
+                ),
+              ),
+
+              // НАЗВАНИЕ ЗАМЕТКИ
+              SizedBox(
+                child: MyTextFormField(controller: tittleTaskController),
+              ),
+              const SizedBox(height: 10),
+
+              // ОПИСАНИЕ ЗАМЕТКИ
+              SizedBox(
+                child: MyTextFormField(
+                  controller: descriptionTaskController,
+                  isForDescription: true,
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

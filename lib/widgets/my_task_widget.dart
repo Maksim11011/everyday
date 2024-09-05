@@ -65,7 +65,7 @@ class MyTaskWidget extends StatelessWidget {
                 ),
               ),
 
-              // Дата заметки
+              // Д А Т А   З А М Е Т К И
               Align(
                 alignment: Alignment.centerRight,
                 child: Padding(

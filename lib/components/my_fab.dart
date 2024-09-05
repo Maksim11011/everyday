@@ -30,6 +30,7 @@ class MyFab extends StatelessWidget {
           child: const Center(
             child: Icon(
               Icons.add,
+              size: 28,
               color: Colors.white,
             ),
           ),
